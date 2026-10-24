@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>POC009 · Knowledge and Memory Continuity · ESS-MAI</title>
   <meta name="description" content="A bounded Rust experiment retaining scoped model support and counterevidence across five process restarts, with exact-state tests, source provenance and explicit limits.">
+  <meta name="citation_title" content="Scoped Model Support and Counterevidence Across Five Memory Cycles in ESS-MAI">
+  <meta name="citation_author" content="Gjata, Bledar">
+  <meta name="citation_doi" content="10.5281/zenodo.23614714">
+  <meta name="citation_pdf_url" content="https://zenodo.org/records/23614714/files/scoped_knowledge_memory.pdf">
   <style>
     :root{color-scheme:light;--ink:#173134;--muted:#50686a;--link:#075d6b;--rule:#c9d8d7}
     *{box-sizing:border-box}body{margin:0;background:#f5f7f4;color:var(--ink);font:17px/1.65 system-ui,sans-serif}
@@ -30,8 +34,9 @@
       <a href="https://huggingface.co/datasets/gjata-legacy/ess-mai-poc-009-knowledge-memory">HF mirror</a>
       <a href="https://doi.org/10.5281/zenodo.23614687">Software DOI</a>
       <a href="https://doi.org/10.5281/zenodo.23614714">Preprint DOI</a>
+      <a href="https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory/raw/refs/heads/main/paper/scoped_knowledge_memory.pdf">Paper PDF</a>
     </nav>
-    <p class="status"><strong>Preparation status · 24 October 2026.</strong> Software DOI <code>10.5281/zenodo.23614687</code> and preprint DOI <code>10.5281/zenodo.23614714</code> are reserved; publication remains pending. Repository and mirror links identify the planned destinations. No CI or completed independent review is asserted here.</p>
+    <p class="status"><strong>Artifact identifiers.</strong> Software: <code>10.5281/zenodo.23614687</code>. Preprint: <code>10.5281/zenodo.23614714</code>. The source repository is public. Identifiers, hosting and automated checks do not establish scientific validation or completed independent review.</p>
   </header>
 
   <section aria-labelledby="observed">
@@ -40,6 +45,7 @@
       <p>Zero failed or ignored tests. At every one of five process boundaries, complete operation records and reconstructed memory matched a persistent control; exact PD checkpoint bytes matched uninterrupted execution. The locked offline release build passed in 21.04 seconds on Windows GNU with Rust 1.98.0.</p>
       <p>One supported proposition and one countered proposition remained in memory, each with two occurrence references. Repetition did not create additional unique evidence.</p>
       <p>The release CLI demonstration passed 93 separate checks across five fresh processes. A Python <code>ctypes</code> probe passed 17 checks against actual C exports: the legacy valid nonempty write call remains no-write <code>CompatibilityHold</code> (<code>-8</code>). The CLI uses a distinct new Rust callback. <a href="https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory/blob/main/evidence/windows-gnu/five-cycle-demo/RESULT.json">CLI receipt</a> · <a href="https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory/blob/main/evidence/windows-gnu/ffi-abi/RESULT.json">ABI receipt</a></p>
+      <p>Separately, <a href="https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory/actions/runs/40083832092">CI run 40083832092</a> succeeded on Windows and Ubuntu at commit <code>a24736cb28233331ecefc108317e76cf7e1a5ef0</code>. Both jobs passed root/dependency tests, release build, the five-process demonstration and actual C ABI probe. <a href="https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory/blob/main/evidence/github-actions/jobs-40083832092.json">Saved job and step results</a></p>
     </div>
     <div class="table-wrap"><table>
       <thead><tr><th scope="col">Cycle</th><th scope="col">Input</th><th scope="col">Observed result</th></tr></thead>
@@ -84,7 +90,7 @@
   </section>
 
   <footer class="fine">
-    <p>Apache-2.0 capsule with retained third-party license obligations. Human architectural direction and AI-assisted implementation/documentation are disclosed in the <a href="https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory/blob/main/WORKING_METHOD.md">working method</a>. Bledar Gjata reports shell-based review. Hosting, DOI reservation, automated checks and multiple agent passes are not independent peer review or certification.</p>
+    <p>Apache-2.0 capsule with retained third-party license obligations. Human architectural direction and AI-assisted implementation/documentation are disclosed in the <a href="https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory/blob/main/WORKING_METHOD.md">working method</a>. Bledar Gjata reports shell-based review. Hosting, identifiers, automated checks and multiple agent passes are not independent peer review or certification.</p>
   </footer>
 </main>
 </body>

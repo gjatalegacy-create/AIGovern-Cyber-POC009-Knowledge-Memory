@@ -3,7 +3,7 @@
 Bledar Gjata · Independent Researcher, Albania  
 [ORCID 0009-0003-7854-266X](https://orcid.org/0009-0003-7854-266X)
 
-**Local validation, 24 October 2026.** Reserved preprint DOI: [10.5281/zenodo.23614714](https://doi.org/10.5281/zenodo.23614714). Reserved software DOI: [10.5281/zenodo.23614687](https://doi.org/10.5281/zenodo.23614687). Both records await publication; CI evidence is separate.
+**24 October 2026.** Preprint identifier: [10.5281/zenodo.23614714](https://doi.org/10.5281/zenodo.23614714). Software identifier: [10.5281/zenodo.23614687](https://doi.org/10.5281/zenodo.23614687).
 
 ## Abstract
 
@@ -51,7 +51,9 @@ The release executable was also run through five fresh CLI processes followed by
 
 On Windows GNU with Rust 1.98.0, the root suite passed 32 unit tests (including 12 FFI checks) and 18 integration tests: 50 passed, zero failed or ignored. The final integration run took 0.88 seconds; the locked offline release build passed in 21.04 seconds using direct Cargo/compiler/rustdoc binaries. Its cases include scoped retrieval, canonical candidate mutation, recomputed public record hashes, stale operations, incomplete-tail recovery, complete CRC corruption and OS lock release after process termination. The valid-old-prefix test intentionally accepted rollback. Separately, 19 extracted science tests passed with zero failed or ignored in 0.03 seconds, using locked offline dependencies and `-Dwarnings`; direct compiler/rustdoc invocation emitted no warnings.
 
-Initial tests exposed floating-point JSON round-trip loss at an exact equality boundary. Enabling `serde_json`'s `float_roundtrip` feature restored the intended comparison. Two subsequent CLI regressions showed that invalid scientific input could create storage or repair an existing incomplete tail before rejection. Moving evaluation before storage opening corrected both without weakening rejection assertions. Reproduction uses `cargo test --locked --offline`; dependency validation adds `--manifest-path dependencies/science-domains/Cargo.toml`. The build command is `cargo build --release --locked --offline`. Under `evidence/windows-gnu/`, the final logs are `cargo_test_final.log` and `cargo_release.log`; demonstration and ABI receipts are `five-cycle-demo/RESULT.json` and `ffi-abi/RESULT.json`. Publication and CI status remain separate.
+Initial tests exposed floating-point JSON round-trip loss at an exact equality boundary. Enabling `serde_json`'s `float_roundtrip` feature restored the intended comparison. Two subsequent CLI regressions showed that invalid scientific input could create storage or repair an existing incomplete tail before rejection. Moving evaluation before storage opening corrected both without weakening rejection assertions. After `cargo fetch --locked`, reproduction uses `cargo test --locked --offline`; dependency validation adds `--manifest-path dependencies/science-domains/Cargo.toml`. The build command is `cargo build --release --locked --offline`. Under `evidence/windows-gnu/`, the final logs are `cargo_test_final.log` and `cargo_release.log`; demonstration and ABI receipts are `five-cycle-demo/RESULT.json` and `ffi-abi/RESULT.json`.
+
+Separately, [CI run 40083832092](https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory/actions/runs/40083832092) succeeded on Windows and Ubuntu at commit `a24736cb28233331ecefc108317e76cf7e1a5ef0`, including root/dependency tests, release build, five-process demonstration and actual C ABI probe. Saved run/job metadata and selected log lines are under `evidence/github-actions/`. These are automated checks for the stated revision, not independent peer review.
 
 ## 5. Limits and contribution boundary
 
@@ -65,7 +67,7 @@ The phrase “negative knowledge” is therefore restricted to a stored model-co
 
 Bledar Gjata directs the architecture and interpretation. OpenAI Codex assisted extraction, engineering, tests and writing; the author reports shell-based review. Automated checks and multiple agent passes are not independent human peer review. The capsule uses Apache-2.0 with retained third-party license obligations.
 
-Planned public locations are [GitHub](https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory) and the [HF mirror](https://huggingface.co/datasets/gjata-legacy/ess-mai-poc-009-knowledge-memory). The reserved software and preprint identifiers distinguish executable evidence from this manuscript; neither constitutes completed publication or review while reserved. Reviewers should report exact versions, inputs, identities, commands and the earliest differing cycle, particularly any unintended authority promotion, scoped reuse, deduplication error or unsupported continuity claim.
+Artifact locations are [GitHub](https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory) and [HF](https://huggingface.co/datasets/gjata-legacy/ess-mai-poc-009-knowledge-memory). The software and preprint identifiers distinguish executable evidence from this manuscript; identifiers and hosting do not establish scientific validation. Reviewers should report exact versions, inputs, identities, commands and the earliest differing cycle, particularly any unintended authority promotion, scoped reuse, deduplication error or unsupported continuity claim.
 
 ## References
 

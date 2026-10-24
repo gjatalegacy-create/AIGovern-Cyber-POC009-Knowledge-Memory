@@ -1,6 +1,6 @@
 # Reproduction and critical review
 
-**Local validation:** 50 root tests and 19 separate science tests passed, plus 93 release CLI checks and 17 external C ABI checks in separate runs. See [CLI evidence](evidence/windows-gnu/five-cycle-demo/RESULT.json) and [ABI evidence](evidence/windows-gnu/ffi-abi/RESULT.json). Software/preprint publication and CI remain pending. No external review has been established.
+**Local validation:** 50 root tests and 19 separate science tests passed, plus 93 release CLI checks and 17 external C ABI checks in separate runs. See [CLI evidence](evidence/windows-gnu/five-cycle-demo/RESULT.json) and [ABI evidence](evidence/windows-gnu/ffi-abi/RESULT.json). Separately, [CI run 40083832092](https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory/actions/runs/40083832092) passed the test/build/demo/ABI steps on Windows and Ubuntu at `a24736cb28233331ecefc108317e76cf7e1a5ef0`. No completed independent review is asserted.
 
 Read the source provenance, [claim boundary](CLAIM_BOUNDARY.md) and [manuscript](paper/manuscript.md), then run the exact locked artifact with its supplied five-cycle fixtures. Distinguish a source observation, a proposed test and an executed counterexample.
 

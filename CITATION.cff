@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Cite the exact POC009 release or commit used. The software and preprint DOIs are reserved; publication is pending at this preparation stage."
+message: "Cite the exact POC009 release or commit used and its software identifier. The accompanying preprint has a separate identifier."
 type: software
 title: "AIGovern-Cyber POC009: Knowledge and Memory Continuity"
 version: "0.1.0"
@@ -27,7 +27,7 @@ references:
       - family-names: "Gjata"
         given-names: "Bledar"
     doi: "10.5281/zenodo.23614714"
-    notes: "Accompanying preprint DOI reserved; publication pending."
+    notes: "Accompanying manuscript; distinct from the executable software artifact."
   - type: software
     title: "ESS-MAI POC003–006 executable prior-art archive"
     doi: "10.5281/zenodo.22750188"

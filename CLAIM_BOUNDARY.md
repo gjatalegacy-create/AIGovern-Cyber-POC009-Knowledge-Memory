@@ -1,6 +1,6 @@
 # Claim boundary
 
-**Local evidence, 24 October 2026:** 50 root tests and 19 separately run science tests passed, with zero failed or ignored; the locked offline release build passed in 21.04 seconds. Software and preprint DOIs are reserved as recorded in the README. Publication and CI evidence remain pending.
+**Local evidence, 24 October 2026:** 50 root tests and 19 separately run science tests passed, with zero failed or ignored; the locked offline release build passed in 21.04 seconds. Separately, [CI run 40083832092](https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory/actions/runs/40083832092) passed root/dependency tests, release build, five-process demonstration and actual C ABI probe on Windows and Ubuntu at commit `a24736cb28233331ecefc108317e76cf7e1a5ef0`. These are automated checks, not independent review.
 
 “Positive knowledge” here means retained model-conditional support for an exact numerical proposition. “Negative knowledge” means retained model-conditional counterevidence for an exact proposition. Neither means independently observed physical truth, full native admission or unrestricted understanding of free text. Typed JSON supplies the science inputs.
 
