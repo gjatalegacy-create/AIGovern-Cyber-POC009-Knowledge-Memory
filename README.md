@@ -81,3 +81,9 @@ Follow [REVIEW_PROTOCOL.md](REVIEW_PROTOCOL.md) for counterexamples. Artifact lo
 Independent critique is invited through the [public PREreview request](https://prereview.org/preprints/doi-10.5281-zenodo.23614714). A published request is not a completed independent review.
 
 Research lineage: [ESS-MAI](https://github.com/gjatalegacy-create/ESS-MAI), [POC003–006 archive](https://doi.org/10.5281/zenodo.22750188), [POC007 software](https://doi.org/10.5281/zenodo.23596907), [POC007 preprint](https://doi.org/10.5281/zenodo.23597026), [POC008 software](https://doi.org/10.5281/zenodo.23613613), [POC008 preprint](https://doi.org/10.5281/zenodo.23613785). Their identifiers and results remain separate from POC009.
+
+## Project, artifact and author links
+
+[GitHub — source](https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory) · [Hugging Face — public mirror](https://huggingface.co/datasets/gjata-legacy/ess-mai-poc-009-knowledge-memory) · [LinkedIn — author](https://www.linkedin.com/in/bledar-gjata-1a527030b/) · [Zenodo — software archive](https://doi.org/10.5281/zenodo.23614687) · [OpenAIRE — software metadata](https://explore.openaire.eu/search/result?pid=10.5281%2Fzenodo.23614687) · [ORCID — author](https://orcid.org/0009-0003-7854-266X)
+
+POC009 is a bounded public research capsule derived from [ESS-MAI](https://github.com/gjatalegacy-create/ESS-MAI), not the full private AIGovern-Cyber runtime. The software archive and its separate manuscript keep distinct identifiers and claim boundaries. LinkedIn and ORCID identify author-declared profiles for Bledar Gjata (Gjata Legacy). The OpenAIRE DOI lookup returned the matching software metadata on 24 October 2026; indexing and these cross-links do not establish peer review, certification or endorsement.
