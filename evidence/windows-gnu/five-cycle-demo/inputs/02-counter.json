@@ -1,0 +1,14 @@
+{
+  "case": "public-era00-five-cycles",
+  "operation": "cycle-02",
+  "tick": 2,
+  "text": "Test claim A: the IAU2000 model angle is 0 radians for this declared UT1 input. Retain any exact model counterproof.",
+  "science": {
+    "jd_part1": 2400000.5,
+    "jd_part2": 54388.0,
+    "time_scale": "UT1",
+    "claim_radians": 0.0,
+    "tolerance_radians": 1e-12,
+    "source": "public-ut1-model-fixture"
+  }
+}

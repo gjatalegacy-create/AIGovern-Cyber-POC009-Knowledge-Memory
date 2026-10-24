@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-24",
+  "platform": "Windows x86_64-pc-windows-gnu",
+  "rustc": "1.98.0",
+  "root_tests": {
+    "passed": 50,
+    "failed": 0,
+    "ignored": 0
+  },
+  "separate_science_tests": {
+    "passed": 19,
+    "failed": 0,
+    "ignored": 0
+  },
+  "release_build": {
+    "command": "cargo build --release --locked --offline",
+    "exit_code": 0
+  },
+  "final_compiler_warnings": 0,
+  "red_regressions": {
+    "invalid_cli_wal_mutation": 2,
+    "strict_numeric_boundary": 1
+  },
+  "five_cycle_demo": "windows-gnu/five-cycle-demo/RESULT.json",
+  "c_abi_probe": "windows-gnu/ffi-abi/RESULT.json",
+  "native_knowledge_verdict": null,
+  "limit": "Finite model-conditional memory experiment, not full native knowledge admission or independent scientific evidence."
+}

@@ -1,0 +1,59 @@
+# AIGovern-Cyber POC009: Knowledge and Memory Continuity
+
+**Validated local artifact, 24 October 2026.** Zenodo has reserved the [software DOI 10.5281/zenodo.23614687](https://doi.org/10.5281/zenodo.23614687) and [preprint DOI 10.5281/zenodo.23614714](https://doi.org/10.5281/zenodo.23614714). Both records await publication; reservation is not publication or external review.
+
+POC009 investigates scoped computational support and counterevidence across five restarted PD cycles. It combines the actual extracted PD engine, the actual science-domains ERA/KiE computation and a source-derived one-use FFI gate with new public memory/storage adapters. The full native `knowledge_verdict` remains `null` and `authority_transferred` remains `false`.
+
+Author: **Bledar Gjata, Independent Researcher, Albania**, [ORCID](https://orcid.org/0009-0003-7854-266X). Human-led architecture and AI-assisted engineering are disclosed in [WORKING_METHOD.md](WORKING_METHOD.md).
+
+## The five-cycle question
+
+The numerical task uses IAU 2000 Earth Rotation Angle through `sofars::erst::era00`, with UT1 Julian date `2400000.5 + 54388.0`. The conformance reference is `0.4022837240028158102` radians and the declared tolerance is `1e-12` radians. The model and its published implementation are existing work: [IAU SOFA](https://www.iausofa.org/2023-10-11c), [sofars](https://github.com/astro-xao/sofars).
+
+| Cycle | Input | Observed behavior in the five-process test |
+| --- | --- | --- |
+| 1 | Science input missing | Requested scoped inputs; no counterproof created |
+| 2 | Claim `0` radians | Computed model counterevidence |
+| 3 | Corrected claim `0.4022837240028158102` | Computed model support |
+| 4 | Repeat claim `0` with a new operation | Retrieved the same negative content; retained another occurrence reference |
+| 5 | Repeat corrected claim with a new operation | Retrieved the same positive content; retained another occurrence reference |
+
+These are two distinct numerical propositions in one case. A supported correction does not erase the earlier countered claim. Repeated computation is not independent evidence. A record's content identity is scoped and checked by full content equality even within a SHA-256 bucket.
+
+## Source and new work
+
+- [Base provenance](base_provenance.json): the POC008 PD/codec/storage starting point.
+- [Science provenance](science_provenance.json): original ERA evaluation, codecs and KiE predicates; three sofars numerical files retain exact bytes.
+- [FFI provenance](ffi_provenance.json): the source gate, legacy no-write compatibility path and disclosed new helper.
+- [Adapter provenance](adapter_provenance.json): the POC009 storage adaptation. `knowledge.rs` supplies the new scoped content index.
+
+The legacy `sovereign_validate_and_write` consumes its handle and returns `CompatibilityHold` (`-8`) for valid nonempty input; it does not write knowledge. New `with_borrowed_payload` consumes the gate and borrows the same pointer/bytes for a callback. A separate owner recomputes and validates before persistence. This is a boundary-specific borrow, not an end-to-end allocation-free pipeline or native authorization.
+
+The index is reconstructed from checked WAL records. Distinct operation records can reference identical content without multiplying unique candidates. The adapter is new POC code, not the complete original KnowledgeVault.
+
+## Reproduce
+
+Use the final pinned toolchain and fixture paths recorded in the release evidence. Current command surface:
+
+```text
+cargo test --locked
+cargo build --release --locked
+poc009-memory step STORE INPUT.json
+poc009-memory inspect STORE CASE
+```
+
+Local Windows GNU tests on Rust 1.98.0 passed **50 root tests: 32 unit tests (including 12 FFI tests) and 18 integration tests**, with zero failed or ignored. The five-process test compared complete operation records and reconstructed memory against a persistent control at every cycle, and compared exact checkpoint bytes against uninterrupted PD execution. Its final index held one positive and one negative content entry, each with two occurrence references, and one missing-evidence event.
+
+Separately, **19 extracted science tests passed**, zero failed or ignored, using locked offline dependencies and `-Dwarnings`; see [dependency validation](dependencies/science-domains/VALIDATION.json). These are separate suites. Initial regressions exposed JSON float round-trip loss at the equality boundary and CLI storage creation/tail repair before invalid scientific input was rejected. Enabling `serde_json`'s `float_roundtrip` feature and evaluating input before opening storage corrected them; the rejection checks remain in the suite.
+
+The locked offline release build passed in **21.04 seconds** using the direct Cargo, rustc and rustdoc toolchain binaries. The final root run again passed all 50 tests; its integration section took 0.88 seconds. The associated logs are `cargo_test_final.log` and `cargo_release.log` in the execution evidence. The CLI demonstration, external ABI probe, frozen archive identity and CI are recorded separately after verification; these local results do not establish them.
+
+## Limits, license and review
+
+Model predicates require supplied UT1 inputs and tolerance; they are not independent physical observation. Missing evidence and equality at the tolerance boundary are not strict counterproofs. Full native admission is excluded. Valid old history may be accepted; source-version binding, finite checkpoint bounds and full replay costs remain material. See [CLAIM_BOUNDARY.md](CLAIM_BOUNDARY.md).
+
+The capsule uses [Apache-2.0](LICENSE), with retained third-party MIT/SOFA notices in [the sofars LICENSE](dependencies/vendor/sofars-0.6.1/LICENSE) and [extraction notice](dependencies/vendor/sofars-0.6.1/NOTICE.md). SOFA endorsement is not claimed.
+
+Follow [REVIEW_PROTOCOL.md](REVIEW_PROTOCOL.md) for counterexamples. Planned destinations: [GitHub](https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory) and [HF](https://huggingface.co/datasets/gjata-legacy/ess-mai-poc-009-knowledge-memory). They are planned links until publication is verified. [CITATION.cff](CITATION.cff) identifies the software; the separate [manuscript](paper/manuscript.md), *Scoped Model Support and Counterevidence Across Five Memory Cycles in ESS-MAI*, carries the reserved preprint DOI above.
+
+Research lineage: [ESS-MAI](https://github.com/gjatalegacy-create/ESS-MAI), [POC003–006 archive](https://doi.org/10.5281/zenodo.22750188), [POC007 software](https://doi.org/10.5281/zenodo.23596907), [POC007 preprint](https://doi.org/10.5281/zenodo.23597026), [POC008 software](https://doi.org/10.5281/zenodo.23613613), [POC008 preprint](https://doi.org/10.5281/zenodo.23613785). Their identifiers and results remain separate from POC009.

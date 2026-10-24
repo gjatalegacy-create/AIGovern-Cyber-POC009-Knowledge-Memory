@@ -1,0 +1,208 @@
+{
+  "schema": 1,
+  "artifact": "POC008 operational continuity engine extraction",
+  "source_product": "AIGovern-Cyber (ESS-MAI / Gjata Legacy lineage)",
+  "source_root_logical": "codex_zvn/runtime",
+  "source_root_handling": "Supplied explicitly by the operator; machine-specific absolute paths are not published.",
+  "scope": "Deterministic PD state, canonical per-session checkpoint, data-only types, fixed-mass arithmetic, neutral 0-NOI.",
+  "excluded": [
+    "Native T1/T2 authority",
+    "Spine/seal/capability types",
+    "Private histories and evidence",
+    "Private runtime persistence and process transport"
+  ],
+  "rustfmt": "rustfmt 1.9.0-stable (88d9e12ae1 2026-08-18)",
+  "extractor": "tools/extract_engine.py",
+  "extractor_sha256": "a4f1c0b0c7e71f85e963e0b6a99e936b4788503f1245b95fad7ca06f6c2a6a14",
+  "files": [
+    {
+      "source_path_relative_to_runtime": "quantum/src/progressive_debatic/mod.rs",
+      "source_sha256": "6ccb2ca2e96330bf054bf44ae84edd78b17b9a4814d5fd91d6d1ec5a511d3efd",
+      "source_bytes": 2822,
+      "source_lines": 39,
+      "selected_line_ranges_inclusive": [
+        [
+          22,
+          25
+        ],
+        [
+          28,
+          28
+        ]
+      ],
+      "selected_source_utf8_sha256": "0b15f427681650bd9d20c678f1bfe63c6f5c5fad17d8f77b57619a38fce9fdc6",
+      "transformations": [
+        "Retain only data-only engine modules; omit native runtime, seal, and authority reexports.",
+        "Normalize line endings to LF and run rustfmt (Rust 2021 edition); no scoring, threshold, or checkpoint algorithm edits."
+      ],
+      "output_path": "src/progressive_debatic/mod.rs",
+      "output_sha256": "0b15f427681650bd9d20c678f1bfe63c6f5c5fad17d8f77b57619a38fce9fdc6",
+      "output_bytes": 137,
+      "output_lines": 5
+    },
+    {
+      "source_path_relative_to_runtime": "quantum/src/progressive_debatic/core.rs",
+      "source_sha256": "7d33b7344381ebd31075968ab1ebca18c22be54e9332d09b2a34a4e6f5be7c37",
+      "source_bytes": 24360,
+      "source_lines": 596,
+      "selected_line_ranges_inclusive": [
+        [
+          1,
+          471
+        ],
+        [
+          514,
+          596
+        ]
+      ],
+      "selected_source_utf8_sha256": "0f16410dd8f8be6ab63596de99fb049b8fced354b7afe5f685f127f5fba15c38",
+      "transformations": [
+        "Omit three seal/runtime tests (source lines 472-513); retain every engine implementation line and five engine tests.",
+        "Normalize line endings to LF and run rustfmt (Rust 2021 edition); no scoring, threshold, or checkpoint algorithm edits."
+      ],
+      "output_path": "src/progressive_debatic/core.rs",
+      "output_sha256": "0f16410dd8f8be6ab63596de99fb049b8fced354b7afe5f685f127f5fba15c38",
+      "output_bytes": 22893,
+      "output_lines": 554
+    },
+    {
+      "source_path_relative_to_runtime": "quantum/src/progressive_debatic/types.rs",
+      "source_sha256": "a0f219f8ccddf556e3766375ec02ff9d82a4e1bda423b9b70fe2553456f71cc2",
+      "source_bytes": 23936,
+      "source_lines": 562,
+      "selected_line_ranges_inclusive": [
+        [
+          1,
+          17
+        ],
+        [
+          28,
+          252
+        ],
+        [
+          473,
+          504
+        ],
+        [
+          506,
+          506
+        ],
+        [
+          511,
+          515
+        ],
+        [
+          517,
+          517
+        ],
+        [
+          522,
+          529
+        ],
+        [
+          538,
+          562
+        ]
+      ],
+      "selected_source_utf8_sha256": "b68d3fa492518836fbc360d816cb189e6907f5719c43d013ccf2f7a8df0f8c3f",
+      "transformations": [
+        "Omit authority imports, seals, two-phase/native authority data types and unused authority/bridge error variants.",
+        "Omit the seal test; retain the three data-only type tests.",
+        "Redirect the FNV-1a call to the standalone crate's same-algorithm helper; do not alter ID mixing.",
+        "Normalize line endings to LF and run rustfmt (Rust 2021 edition); no scoring, threshold, or checkpoint algorithm edits."
+      ],
+      "output_path": "src/progressive_debatic/types.rs",
+      "output_sha256": "8fd69bd037195e9cf1bfcbf28a03bbd5c1fa23316d7f5aecb880a5d743a3e8e1",
+      "output_bytes": 15048,
+      "output_lines": 314
+    },
+    {
+      "source_path_relative_to_runtime": "quantum/src/progressive_debatic/genius_detector.rs",
+      "source_sha256": "6d49345667f0b350e92a2e597ef0b4766c6437957974382a4331e46bf396b508",
+      "source_bytes": 11533,
+      "source_lines": 328,
+      "selected_line_ranges_inclusive": [
+        [
+          1,
+          328
+        ]
+      ],
+      "selected_source_utf8_sha256": "6d49345667f0b350e92a2e597ef0b4766c6437957974382a4331e46bf396b508",
+      "transformations": [
+        "Retain complete source, including all three original tests.",
+        "Normalize line endings to LF and run rustfmt (Rust 2021 edition); no scoring, threshold, or checkpoint algorithm edits."
+      ],
+      "output_path": "src/progressive_debatic/genius_detector.rs",
+      "output_sha256": "6d49345667f0b350e92a2e597ef0b4766c6437957974382a4331e46bf396b508",
+      "output_bytes": 11533,
+      "output_lines": 328
+    },
+    {
+      "source_path_relative_to_runtime": "quantum/src/progressive_debatic/checkpoint.rs",
+      "source_sha256": "5cbabc0af24c095f0c63b6219fe8eea6c2033fe0f0314644b625bb8690e3345c",
+      "source_bytes": 30714,
+      "source_lines": 907,
+      "selected_line_ranges_inclusive": [
+        [
+          1,
+          907
+        ]
+      ],
+      "selected_source_utf8_sha256": "5cbabc0af24c095f0c63b6219fe8eea6c2033fe0f0314644b625bb8690e3345c",
+      "transformations": [
+        "Retain complete source, including all seven original checkpoint tests.",
+        "Normalize line endings to LF and run rustfmt (Rust 2021 edition); no scoring, threshold, or checkpoint algorithm edits."
+      ],
+      "output_path": "src/progressive_debatic/checkpoint.rs",
+      "output_sha256": "5cbabc0af24c095f0c63b6219fe8eea6c2033fe0f0314644b625bb8690e3345c",
+      "output_bytes": 30714,
+      "output_lines": 907
+    },
+    {
+      "source_path_relative_to_runtime": "shadow-contracts/src/boundary/pd_spine.rs",
+      "source_sha256": "ac203b9474a25818de8ef4402a63c6eddf6419e249ec57725bd1f1e7b57e41e4",
+      "source_bytes": 18103,
+      "source_lines": 534,
+      "selected_line_ranges_inclusive": [
+        [
+          9,
+          9
+        ],
+        [
+          18,
+          38
+        ]
+      ],
+      "selected_source_utf8_sha256": "fe9119b4dbcdd192b581a096380ff4dec19670a2a6b1c6f1ce8504cfa355d95b",
+      "transformations": [
+        "Extract only MASS_SCALE and FixedMass; no Spine contract, capability, or authority types.",
+        "Normalize line endings to LF and run rustfmt (Rust 2021 edition); no scoring, threshold, or checkpoint algorithm edits."
+      ],
+      "output_path": "src/pd_spine_contract.rs",
+      "output_sha256": "fe9119b4dbcdd192b581a096380ff4dec19670a2a6b1c6f1ce8504cfa355d95b",
+      "output_bytes": 669,
+      "output_lines": 22
+    },
+    {
+      "source_path_relative_to_runtime": "zero-noi/src/lib.rs",
+      "source_sha256": "db6ba97d1c8c95d642f261a423336c4510212abe2f162ce1fe4db5f471619cd9",
+      "source_bytes": 1228,
+      "source_lines": 28,
+      "selected_line_ranges_inclusive": [
+        [
+          1,
+          28
+        ]
+      ],
+      "selected_source_utf8_sha256": "db6ba97d1c8c95d642f261a423336c4510212abe2f162ce1fe4db5f471619cd9",
+      "transformations": [
+        "Retain complete neutral borrowed-payload primitive and its two original tests.",
+        "Normalize line endings to LF and run rustfmt (Rust 2021 edition); no scoring, threshold, or checkpoint algorithm edits."
+      ],
+      "output_path": "src/zero_noi.rs",
+      "output_sha256": "cc3b00bc0db1a35981689c536ba00fd72ac9f3586c1cdce05dca5631bfee4f55",
+      "output_bytes": 1428,
+      "output_lines": 56
+    }
+  ]
+}

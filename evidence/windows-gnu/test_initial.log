@@ -1,0 +1,98 @@
+   Compiling typenum v1.20.1
+   Compiling cfg-if v1.0.5
+   Compiling cpufeatures v0.2.17
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling sofars v0.6.1 ([PUBLIC_PACKAGE]\dependencies\vendor\sofars-0.6.1)
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling generic-array v0.14.7
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling digest v0.10.7
+   Compiling sha2 v0.10.9
+   Compiling science-domains v0.1.0 ([PUBLIC_PACKAGE]\dependencies\science-domains)
+   Compiling serde_json v1.0.150
+   Compiling aigovern-cyber-poc009-knowledge-memory v0.1.0 ([PUBLIC_PACKAGE])
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 16.75s
+     Running unittests src\lib.rs ([BUILD_TARGET]\debug\deps\poc009_knowledge_memory-f4e8501d76af618d.exe)
+
+running 32 tests
+test ffi_gate::tests::ffi_view_preserves_pointer_identity_without_allocation ... ok
+test ffi_gate::tests::empty_payload_is_rejected_after_capability_validation ... ok
+test ffi_gate::tests::clone_attack_second_use_is_refused ... ok
+test ffi_gate::tests::nonempty_direct_write_is_compatibility_hold ... ok
+test ffi_gate::tests::callback_preserves_every_byte_and_pointer_then_denies_reuse ... ok
+test ffi_gate::tests::replay_third_time_still_burned ... ok
+test ffi_gate::tests::forged_nonce_is_rejected ... ok
+test ffi_gate::tests::wrong_nonce_does_not_consume_the_real_handle ... ok
+test ffi_gate::tests::empty_and_null_calls_consume_the_grant_without_callback ... ok
+test ffi_gate::tests::unknown_handle_is_not_found ... ok
+test ffi_gate::tests::callback_error_and_panic_do_not_restore_consumed_grants ... ok
+test progressive_debatic::checkpoint::tests::decoder_rejects_duplicate_unordered_and_unbacked_collections ... ok
+test ffi_gate::tests::copied_handles_racing_in_one_process_reach_exactly_one_callback ... ok
+test progressive_debatic::checkpoint::tests::canonical_map_order_and_tie_policy_are_independent_of_insertion_order ... ok
+test progressive_debatic::core::tests::contradiction_pair_recorded_on_negation ... ok
+test progressive_debatic::core::tests::dominant_concept_survives ... ok
+test progressive_debatic::core::tests::session_not_found_is_fail_closed ... ok
+test progressive_debatic::types::tests::budget_max_matches_mode ... ok
+test progressive_debatic::genius_detector::tests::helpers_are_deterministic ... ok
+test progressive_debatic::genius_detector::tests::no_genius_before_min_turns ... ok
+test progressive_debatic::core::tests::returns_detected_on_concept_reuse ... ok
+test progressive_debatic::core::tests::package_estimated_trl_capped_at_two ... ok
+test progressive_debatic::genius_detector::tests::genius_signals_use_fixed_mass ... ok
+test progressive_debatic::types::tests::pd_id_is_deterministic_and_12_hex ... ok
+test progressive_debatic::types::tests::response_challenge_classification ... ok
+test zero_noi::tests::no_payload_interpretation ... ok
+test zero_noi::tests::no_mutation_no_authority ... ok
+test progressive_debatic::checkpoint::tests::checkpoint_roundtrip_preserves_state_and_next_real_ingest ... ok
+test progressive_debatic::checkpoint::tests::inactive_flags_resistance_and_real_genius_state_survive ... ok
+test progressive_debatic::checkpoint::tests::inconsistent_counts_scopes_and_derived_material_fail_export ... ok
+test progressive_debatic::checkpoint::tests::invalid_inputs_never_mutate_target ... ok
+test progressive_debatic::checkpoint::tests::exact_u32_budget_width_and_exhaustion_are_not_reset ... ok
+
+test result: ok. 32 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s
+
+     Running unittests src\main.rs ([BUILD_TARGET]\debug\deps\poc009_memory-ca174c2c901dcdd6.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\knowledge_memory.rs ([BUILD_TARGET]\debug\deps\knowledge_memory-313d144747b59033.exe)
+
+running 16 tests
+test altered_lgc_is_refused_without_write ... ok
+test missing_input_is_a_question_not_a_semantic_negative ... ok
+test changed_candidate_bytes_and_rehashed_key_are_refused ... ok
+test unsupported_timescale_does_not_append ... ok
+test public_prepared_fields_do_not_bypass_owned_recomputation ... ok
+test candidate_retrieval_is_exact_scope_and_proposition ... ok
+test equality_is_unresolved_and_creates_neither_polarity ... FAILED
+test complete_crc_corruption_is_not_repaired ... ok
+test false_support_with_valid_recomputed_record_hash_is_refused_on_reopen ... ok
+test exact_old_retry_does_not_duplicate_evidence_after_head_advanced ... ok
+test stale_and_changed_operations_are_refused ... ok
+test current_counterproof_remains_negative_even_after_positive_memory ... ok
+test incomplete_tail_recovers_last_committed_both_polarity_state ... ok
+test whole_valid_old_prefix_documents_rollback_limit ... ok
+test lock_is_exclusive_and_os_releases_it_after_process_kill ... ok
+test five_fresh_processes_preserve_both_polarities_and_exact_pd_prefixes ... ok
+
+failures:
+
+---- equality_is_unresolved_and_creates_neither_polarity stdout ----
+
+thread 'equality_is_unresolved_and_creates_neither_polarity' (16092) panicked at tests\knowledge_memory.rs:43:420:
+assertion `left == right` failed
+  left: String("model_counterproof")
+ right: "unresolved_boundary"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    equality_is_unresolved_and_creates_neither_polarity
+
+test result: FAILED. 15 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.65s
+
+error: test failed, to rerun pass `--test knowledge_memory`

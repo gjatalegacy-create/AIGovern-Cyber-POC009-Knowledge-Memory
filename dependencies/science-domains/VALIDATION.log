@@ -1,0 +1,43 @@
+   Compiling version_check v0.9.5
+   Compiling typenum v1.20.1
+   Compiling cpufeatures v0.2.17
+   Compiling cfg-if v1.0.5
+   Compiling sofars v0.6.1 (<CAPSULE>\dependencies\vendor\sofars-0.6.1)
+   Compiling generic-array v0.14.7
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling digest v0.10.7
+   Compiling sha2 v0.10.9
+   Compiling science-domains v0.1.0 (<CAPSULE>\dependencies\science-domains)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.84s
+     Running unittests src\lib.rs (<SCIENCE_TARGET>\debug\deps\science_domains-b131745d7cd4ca0f.exe)
+
+running 19 tests
+test tests::all_uninstalled_domains_explicitly_unavailable ... ok
+test kie::tests::canonical_claim_respects_original_light_512_byte_gate_for_valid_extremes ... ok
+test kie::r27_measurement_tests::r27_measured_counterproof_keeps_its_actual_residual_strength ... ok
+test tests::empty_control_or_unbounded_identity_is_rejected ... ok
+test kie::tests::canonical_scope_cannot_be_reused_for_different_claim_or_user_topic ... ok
+test tests::length_prefix_overflow_truncation_and_noncanonical_numbers_rejected ... ok
+test kie::r27_measurement_tests::r27_measured_support_retains_actual_provider_and_full_identity ... ok
+test tests::all_scope_fields_and_numeric_input_bind_hashes ... ok
+test kie::r27_measurement_tests::r27_measured_residual_is_symmetric_around_the_actual_model_value ... ok
+test tests::iau_primary_conformance_and_real_counter_computation ... ok
+test tests::wrong_timescale_nonfinite_and_out_of_domain_are_rejected ... ok
+test tests::negative_zero_input_normalization_and_exact_boundary ... ok
+test kie::r27_measurement_tests::r27_measured_legacy_predicates_remain_unchanged_and_repeated_compute_adds_no_evidence ... ok
+test kie::r27_measurement_tests::r27_measured_boundary_and_adjacent_floats_are_strict ... ok
+test tests::swapped_julian_parts_follow_exact_upstream_contract ... ok
+test kie::r27_measurement_tests::r27_measured_candidate_tamper_is_rejected_even_with_coherent_resealed_data ... ok
+test kie::tests::support_counter_and_boundary_use_real_model_without_fabricated_history ... ok
+test tests::canonical_codec_roundtrip_and_candidate_tamper_rejection ... ok
+test kie::r27_measurement_tests::r27_measured_same_numbers_do_not_allow_cross_scope_or_input_source_reuse ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+   Doc-tests science_domains
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

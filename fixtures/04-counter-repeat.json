@@ -1,0 +1,14 @@
+{
+  "case": "public-era00-five-cycles",
+  "operation": "cycle-04",
+  "tick": 4,
+  "text": "After restart, retrieve claim A's exact scoped counterproof and recompute claim A from the same numerical inputs. A repeat is not independent evidence.",
+  "science": {
+    "jd_part1": 2400000.5,
+    "jd_part2": 54388.0,
+    "time_scale": "UT1",
+    "claim_radians": 0.0,
+    "tolerance_radians": 1e-12,
+    "source": "public-ut1-model-fixture"
+  }
+}

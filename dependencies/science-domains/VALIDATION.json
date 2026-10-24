@@ -1,0 +1,28 @@
+{
+  "scope": "Isolated extracted science-domains dependency only; separate from root POC009 tests",
+  "date": "2026-10-24",
+  "command": "cargo test --manifest-path dependencies/science-domains/Cargo.toml --locked --offline --target-dir <SCIENCE_TARGET>",
+  "environment": {
+    "RUSTFLAGS": "-Dwarnings",
+    "RUSTC": "direct toolchain rustc.exe, not rustup shim",
+    "RUSTDOC": "direct toolchain rustdoc.exe, not rustup shim",
+    "cargo": "direct toolchain cargo.exe"
+  },
+  "exit_code": 0,
+  "passed": 19,
+  "failed": 0,
+  "ignored": 0,
+  "doctests": 0,
+  "test_seconds": 0.03,
+  "build_seconds": 5.84,
+  "toolchain": "rustc/rustdoc 1.98.0 (88d9e12ae 2026-08-18), Windows GNU",
+  "warnings_observed": false,
+  "previous_run_note": "An earlier rustup-shim invocation passed 19 tests and emitted a user-path canonicalization warning. This revalidation invoked the compiler and rustdoc directly; warning suppression was not used.",
+  "log": "VALIDATION.log",
+  "log_sha256": "7f02fab24d0f5c10f639b19e3ab83d9e59a8d47d449a50290adfbe214e08e4c5",
+  "dependency_lock_sha256": "bc4403fb19ce34ed260beb0f1c2869b81f51667a271eaf517097cc32b1d540f2",
+  "extraction_output_hashes_verified": true,
+  "source_files_unchanged": true,
+  "source_verification": "Seven source/output files, four generated files and extractor verified against existing science_provenance.json; recorded transformations independently reproduced output bytes.",
+  "kie_measurement_origin": "measure_kie and KieModelMeasurement are already present in original source and in the byte-exact extracted kie.rs, not additions in this POC009 continuation."
+}

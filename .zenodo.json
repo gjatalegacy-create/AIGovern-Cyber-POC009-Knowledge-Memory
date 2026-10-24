@@ -1,0 +1,79 @@
+{
+  "title": "AIGovern-Cyber POC009: Knowledge and Memory Continuity",
+  "upload_type": "software",
+  "version": "0.1.0",
+  "doi": "10.5281/zenodo.23614687",
+  "creators": [
+    {
+      "name": "Gjata, Bledar",
+      "orcid": "0009-0003-7854-266X",
+      "affiliation": "Independent Researcher, Albania"
+    }
+  ],
+  "description": "A bounded Rust experiment combining the actual extracted Progressive Debatic engine, ERA/KiE scientific evaluation and a source-derived process-local one-use FFI gate with new public scoped memory and WAL adapters. Five fresh-process cycles perform missing-input handling, a zero-angle counter-result, a corrected-angle support result, and repetition of both propositions. Complete operation records and reconstructed memory match a persistent-process control at every cycle; exact checkpoint bytes match uninterrupted PD execution. The final index retains one positive and one negative unique content entry with two distinct occurrence references each. The local Windows GNU Rust 1.98.0 run passes 50 root tests (32 unit, including 12 FFI, plus 18 integration) and 19 separately executed science tests, with no failed or ignored tests. The locked offline release build passes in 21.04 seconds. The numerical fixture is a model/conformance comparison using UT1 JD 2400000.5 + 54388.0, angle 0.4022837240028158102 radians and tolerance 1e-12; it is not an independent physical observation. CandidateAuthority remains None, knowledge_verdict remains null, and no native knowledge admission or authority transfer is asserted. The original FFI write surface retains no-write CompatibilityHold; a new callback borrows the unchanged pointer/bytes, while its owner recomputes and validates before persistence. The storage adapter is not the original full KnowledgeVault. Coherent valid-history rollback remains accepted, checkpoints are bounded to 4096 turns and 8 MiB, full replay has unbenchmarked cost, source-version changes can invalidate records, and no migration, authenticated rollback prevention, physical power-cut campaign, hostile-host proof, certification or general scientific truth claim is established. Exact sofars numerical source bytes and complete MIT/SOFA notices are retained alongside the capsule's Apache-2.0 license. Bledar Gjata directs the architecture; OpenAI Codex assisted engineering, tests and writing, and the author reports shell-based review. CI, external ABI demonstrations and independent review have separate evidence requirements.",
+  "notes": "Preparation metadata: software DOI 10.5281/zenodo.23614687 and accompanying preprint DOI 10.5281/zenodo.23614714 are reserved in Zenodo. Publication is pending. DOI reservation, repository hosting and review invitations are not completed peer review.",
+  "license": "apache2.0",
+  "access_right": "open",
+  "keywords": [
+    "ESS-MAI",
+    "AIGovern-Cyber",
+    "POC009",
+    "Rust",
+    "model-conditional evidence",
+    "positive and negative memory",
+    "checkpoint continuity",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/gjatalegacy-create/ESS-MAI",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.23614714",
+      "relation": "isDescribedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22750188",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23596907",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23597026",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23613613",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23613785",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/astro-xao/sofars",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://www.iausofa.org/2023-10-11c",
+      "relation": "references",
+      "scheme": "url"
+    }
+  ]
+}

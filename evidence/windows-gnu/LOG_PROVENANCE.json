@@ -1,0 +1,32 @@
+[
+  {
+    "file": "test_initial.log",
+    "original_sha256": "3985875f25ef89915192a582b82dc6b03b5d168a0a9e6bf1543e9160789d628e",
+    "public_sha256": "4fc47e6b356927424b47696a8ae874a525e9f49d58447306f6ad78916ad6a21f",
+    "transform": "machine path labels and LF/UTF-8 only; no outcomes removed"
+  },
+  {
+    "file": "regression_red.log",
+    "original_sha256": "0ec03810c389ea7ccc75f11672a2e552e71e175cb7c1d24e5782800f9897ae84",
+    "public_sha256": "679210adf5482cd6b64ac421e0d521d7cb47d2daca4c310fd3857fe26ad2e019",
+    "transform": "machine path labels and LF/UTF-8 only; no outcomes removed"
+  },
+  {
+    "file": "regression_green.log",
+    "original_sha256": "3ebcec12e730e5465939545e5f47c5100e0c4e03896a5331bdcf643fc0c95170",
+    "public_sha256": "20a9b056061a3b3b99c5d653553f2ac3657b4dc37d5872fadcc8f54eed308dca",
+    "transform": "machine path labels and LF/UTF-8 only; no outcomes removed"
+  },
+  {
+    "file": "cargo_test_final.log",
+    "original_sha256": "f5b6d70241078288e92936973730901d41408374835c2857d440f5f6f6443485",
+    "public_sha256": "4cbfc70ff5bb20c65a9e73679733eb8982858c1ce45079af07e457d5737d81a5",
+    "transform": "machine path labels and LF/UTF-8 only; no outcomes removed"
+  },
+  {
+    "file": "cargo_release.log",
+    "original_sha256": "77a8ddedcfc3e042a5ffd03380383fef01b034654a28fb22683ba5219ba99d05",
+    "public_sha256": "9137c76210a84574fe348c0cb3958af4b4c4e7cbe6947475c0af7dad43243aac",
+    "transform": "machine path labels and LF/UTF-8 only; no outcomes removed"
+  }
+]

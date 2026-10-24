@@ -1,0 +1,18 @@
+   Compiling version_check v0.9.5
+   Compiling typenum v1.20.1
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling cfg-if v1.0.5
+   Compiling cpufeatures v0.2.17
+   Compiling serde_json v1.0.150
+   Compiling memchr v2.8.3
+   Compiling sofars v0.6.1 ([PUBLIC_PACKAGE]\dependencies\vendor\sofars-0.6.1)
+   Compiling itoa v1.0.18
+   Compiling generic-array v0.14.7
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling digest v0.10.7
+   Compiling sha2 v0.10.9
+   Compiling science-domains v0.1.0 ([PUBLIC_PACKAGE]\dependencies\science-domains)
+   Compiling aigovern-cyber-poc009-knowledge-memory v0.1.0 ([PUBLIC_PACKAGE])
+    Finished `release` profile [optimized] target(s) in 21.04s

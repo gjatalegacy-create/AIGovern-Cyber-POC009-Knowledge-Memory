@@ -1,0 +1,7 @@
+{
+  "base": "https://github.com/gjatalegacy-create/AIGovern-Cyber-POC008-Continuity/blob/poc008-public-v0.1.0/src/continuity.rs",
+  "base_sha256": "af7d2275e6c0cd40a53258e44c3daef9f130fef4df3459ebf0cafc962f480c92",
+  "classification": "NEW POC009 adaptation; typed science inputs, current recomputation, derived scoped content index, changed WAL magic. Not original KnowledgeVault.",
+  "generator": "tools/build_adapter.py",
+  "output_sha256": "215c91fea1d72fa1d8fd1bce78e73edce414e4aa7a55cd42efea2791186d51c3"
+}

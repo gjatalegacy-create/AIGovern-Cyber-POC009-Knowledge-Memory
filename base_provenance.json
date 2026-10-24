@@ -1,0 +1,73 @@
+{
+  "source_repository": "https://github.com/gjatalegacy-create/AIGovern-Cyber-POC008-Continuity",
+  "source_tag": "poc008-public-v0.1.0",
+  "source_doi": "10.5281/zenodo.23613613",
+  "entries": [
+    {
+      "source": "src/pd_memory.rs",
+      "source_sha256": "a1a333f9e0ca4ba42b10dac09b0ce3345ffcfa08f90cef235ed538e7a71dda54",
+      "output": "src/pd_memory.rs",
+      "transformation": "none; byte-identical published POC008 substrate"
+    },
+    {
+      "source": "src/projection.rs",
+      "source_sha256": "866361b03176cb603141d489886c1f9fe8456d92389e3bcc81424c317aa19647",
+      "output": "src/projection.rs",
+      "transformation": "none; byte-identical published POC008 substrate"
+    },
+    {
+      "source": "src/zero_noi.rs",
+      "source_sha256": "cc3b00bc0db1a35981689c536ba00fd72ac9f3586c1cdce05dca5631bfee4f55",
+      "output": "src/zero_noi.rs",
+      "transformation": "none; byte-identical published POC008 substrate"
+    },
+    {
+      "source": "src/framing.rs",
+      "source_sha256": "0f0a7e2b312f6b2cc4027d0bcfbb7d9ddfbfc2affb402107473dbfa0a052c9f4",
+      "output": "src/framing.rs",
+      "transformation": "none; byte-identical published POC008 substrate"
+    },
+    {
+      "source": "src/fnv.rs",
+      "source_sha256": "14ecf4445c1d5fb57ecfb3650b6e3850178dad767003de4c748b6e280c20bd97",
+      "output": "src/fnv.rs",
+      "transformation": "none; byte-identical published POC008 substrate"
+    },
+    {
+      "source": "src/pd_spine_contract.rs",
+      "source_sha256": "fe9119b4dbcdd192b581a096380ff4dec19670a2a6b1c6f1ce8504cfa355d95b",
+      "output": "src/pd_spine_contract.rs",
+      "transformation": "none; byte-identical published POC008 substrate"
+    },
+    {
+      "source": "src/progressive_debatic/checkpoint.rs",
+      "source_sha256": "5cbabc0af24c095f0c63b6219fe8eea6c2033fe0f0314644b625bb8690e3345c",
+      "output": "src/progressive_debatic/checkpoint.rs",
+      "transformation": "none; byte-identical published POC008 substrate"
+    },
+    {
+      "source": "src/progressive_debatic/core.rs",
+      "source_sha256": "0f16410dd8f8be6ab63596de99fb049b8fced354b7afe5f685f127f5fba15c38",
+      "output": "src/progressive_debatic/core.rs",
+      "transformation": "none; byte-identical published POC008 substrate"
+    },
+    {
+      "source": "src/progressive_debatic/genius_detector.rs",
+      "source_sha256": "6d49345667f0b350e92a2e597ef0b4766c6437957974382a4331e46bf396b508",
+      "output": "src/progressive_debatic/genius_detector.rs",
+      "transformation": "none; byte-identical published POC008 substrate"
+    },
+    {
+      "source": "src/progressive_debatic/types.rs",
+      "source_sha256": "8fd69bd037195e9cf1bfcbf28a03bbd5c1fa23316d7f5aecb880a5d743a3e8e1",
+      "output": "src/progressive_debatic/types.rs",
+      "transformation": "none; byte-identical published POC008 substrate"
+    },
+    {
+      "source": "src/progressive_debatic/mod.rs",
+      "source_sha256": "0b15f427681650bd9d20c678f1bfe63c6f5c5fad17d8f77b57619a38fce9fdc6",
+      "output": "src/progressive_debatic/mod.rs",
+      "transformation": "none; byte-identical published POC008 substrate"
+    }
+  ]
+}

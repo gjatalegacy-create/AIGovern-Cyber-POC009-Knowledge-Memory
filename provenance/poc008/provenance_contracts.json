@@ -1,0 +1,120 @@
+[
+  {
+    "source": "shadow-contracts/src/pd_memory.rs",
+    "source_sha256": "fd5364567ee1e86600b634b510a80ccaca2532c6c36768b4ecc5415e2c68ebe5",
+    "inclusive_ranges": [
+      [
+        1,
+        4
+      ],
+      [
+        14,
+        223
+      ],
+      [
+        240,
+        280
+      ],
+      [
+        290,
+        678
+      ],
+      [
+        963,
+        1004
+      ]
+    ],
+    "output": "src/pd_memory.rs",
+    "transformations": [],
+    "line_endings": "LF",
+    "formatting": "rustfmt --edition 2021",
+    "output_sha256": "a1a333f9e0ca4ba42b10dac09b0ce3345ffcfa08f90cef235ed538e7a71dda54"
+  },
+  {
+    "source": "shadow/src/pd_memory_store.rs",
+    "source_sha256": "7cb4094ed78c525105f53c07b695fb81050f5c62627e917f6b0f8e9377e47682",
+    "inclusive_ranges": [
+      [
+        1,
+        52
+      ],
+      [
+        96,
+        108
+      ],
+      [
+        124,
+        170
+      ],
+      [
+        218,
+        271
+      ],
+      [
+        273,
+        289
+      ]
+    ],
+    "output": "src/projection.rs",
+    "transformations": [
+      {
+        "from": "shadow_contracts::pd_memory",
+        "to": "crate::pd_memory"
+      },
+      {
+        "from": "//! NEW operational projection over the existing KnowledgeVault WAL.",
+        "to": "//! Source-derived scoped projection; POC008 supplies a separate, limited WAL adapter."
+      },
+      {
+        "from": "//! Only KnowledgeVault commits this projection after the same backend sync.",
+        "to": "//! The POC008 Store publishes this projection only after its durable append."
+      },
+      {
+        "from": "/// Caller holds the shared KnowledgeVault commit lock and this projection's\n    /// write lock until durable append and publication finish.",
+        "to": "/// Caller holds the exclusive Store file lock and mutable projection through durable append."
+      }
+    ],
+    "line_endings": "LF",
+    "formatting": "rustfmt --edition 2021",
+    "output_sha256": "866361b03176cb603141d489886c1f9fe8456d92389e3bcc81424c317aa19647"
+  },
+  {
+    "source": "shadow-contracts/src/lib.rs",
+    "source_sha256": "2993284234716ac0a00b60e5225a4d683445bfd052b49343a75d8934980056f5",
+    "inclusive_ranges": [
+      [
+        1409,
+        1416
+      ]
+    ],
+    "output": "src/fnv.rs",
+    "transformations": [],
+    "line_endings": "LF",
+    "formatting": "rustfmt --edition 2021",
+    "output_sha256": "14ecf4445c1d5fb57ecfb3650b6e3850178dad767003de4c748b6e280c20bd97"
+  },
+  {
+    "source": "shadow/src/vault_disk.rs",
+    "source_sha256": "e5a2d008dc6a14587c7af5683dce5d859bd14979946e69bfde61f2ed711aa301",
+    "inclusive_ranges": [
+      [
+        107,
+        119
+      ],
+      [
+        126,
+        128
+      ]
+    ],
+    "output": "src/framing.rs",
+    "transformations": [
+      {
+        "from": "fn frame_crc",
+        "to": "pub(crate) fn frame_crc"
+      }
+    ],
+    "line_endings": "LF",
+    "formatting": "rustfmt --edition 2021",
+    "output_sha256": "0f0a7e2b312f6b2cc4027d0bcfbb7d9ddfbfc2affb402107473dbfa0a052c9f4"
+  }
+]

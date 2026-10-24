@@ -1,0 +1,263 @@
+{
+  "schema": "POC009/C-ABI-PROBE/1",
+  "status": "PASS",
+  "library": "runner/poc009_knowledge_memory.dll",
+  "library_sha256": "92f470eb2b6aa82bebc20abe47136c8f8ce631231937cd500f1d95f0281d48e9",
+  "script_sha256": "902b87c1d06b36cc635b376b1618e57ee16ae60cc73b46d90024c07364ade5f5",
+  "load_call": {
+    "function": "ctypes.CDLL",
+    "argument": "runner/poc009_knowledge_memory.dll",
+    "cwd": ". (this output directory)"
+  },
+  "calls": [
+    {
+      "name": "issue valid handle",
+      "symbol": "sovereign_issue_capability",
+      "module_seal": 1826492392652638129,
+      "returned": {
+        "gen": 1,
+        "nonce": 1826492392652638129
+      }
+    },
+    {
+      "name": "first nonempty use",
+      "symbol": "sovereign_validate_and_write",
+      "handle": {
+        "gen": 1,
+        "nonce": 1826492392652638129
+      },
+      "payload": "all-byte fixture",
+      "length": 256,
+      "returncode": -8
+    },
+    {
+      "name": "copied handle reuse",
+      "symbol": "sovereign_validate_and_write",
+      "handle": {
+        "gen": 1,
+        "nonce": 1826492392652638129
+      },
+      "payload": "all-byte fixture",
+      "length": 256,
+      "returncode": -1
+    },
+    {
+      "name": "third use",
+      "symbol": "sovereign_validate_and_write",
+      "handle": {
+        "gen": 1,
+        "nonce": 1826492392652638129
+      },
+      "payload": "all-byte fixture",
+      "length": 256,
+      "returncode": -1
+    },
+    {
+      "name": "issue for nonce test",
+      "symbol": "sovereign_issue_capability",
+      "module_seal": 1826492392652638129,
+      "returned": {
+        "gen": 2,
+        "nonce": 1826492392652638129
+      }
+    },
+    {
+      "name": "forged nonce",
+      "symbol": "sovereign_validate_and_write",
+      "handle": {
+        "gen": 2,
+        "nonce": 1826492392652638128
+      },
+      "payload": "all-byte fixture",
+      "length": 256,
+      "returncode": -3
+    },
+    {
+      "name": "original after wrong nonce",
+      "symbol": "sovereign_validate_and_write",
+      "handle": {
+        "gen": 2,
+        "nonce": 1826492392652638129
+      },
+      "payload": "all-byte fixture",
+      "length": 256,
+      "returncode": -8
+    },
+    {
+      "name": "unknown generation",
+      "symbol": "sovereign_validate_and_write",
+      "handle": {
+        "gen": 18446744073709551615,
+        "nonce": 1826492392652638129
+      },
+      "payload": "all-byte fixture",
+      "length": 256,
+      "returncode": -2
+    },
+    {
+      "name": "issue for empty test",
+      "symbol": "sovereign_issue_capability",
+      "module_seal": 1826492392652638129,
+      "returned": {
+        "gen": 3,
+        "nonce": 1826492392652638129
+      }
+    },
+    {
+      "name": "empty payload",
+      "symbol": "sovereign_validate_and_write",
+      "handle": {
+        "gen": 3,
+        "nonce": 1826492392652638129
+      },
+      "payload": "null",
+      "length": 0,
+      "returncode": -5
+    },
+    {
+      "name": "reuse after empty",
+      "symbol": "sovereign_validate_and_write",
+      "handle": {
+        "gen": 3,
+        "nonce": 1826492392652638129
+      },
+      "payload": "all-byte fixture",
+      "length": 256,
+      "returncode": -1
+    },
+    {
+      "name": "issue caller-selected zero label",
+      "symbol": "sovereign_issue_capability",
+      "module_seal": 0,
+      "returned": {
+        "gen": 4,
+        "nonce": 0
+      }
+    },
+    {
+      "name": "arbitrary label held",
+      "symbol": "sovereign_validate_and_write",
+      "handle": {
+        "gen": 4,
+        "nonce": 0
+      },
+      "payload": "all-byte fixture",
+      "length": 256,
+      "returncode": -8
+    },
+    {
+      "name": "issue for copied-handle race",
+      "symbol": "sovereign_issue_capability",
+      "module_seal": 1826492392652638129,
+      "returned": {
+        "gen": 5,
+        "nonce": 1826492392652638129
+      }
+    },
+    {
+      "name": "16 copied handles in concurrent C calls",
+      "symbol": "sovereign_validate_and_write",
+      "handle": {
+        "gen": 5,
+        "nonce": 1826492392652638129
+      },
+      "length": 256,
+      "returncodes": [
+        -8,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "repr(C) handle is exactly two u64 fields",
+      "passed": true
+    },
+    {
+      "name": "issue valid handle: issued data handle",
+      "passed": true
+    },
+    {
+      "name": "nonempty direct write is held",
+      "passed": true
+    },
+    {
+      "name": "copied handle second use is refused",
+      "passed": true
+    },
+    {
+      "name": "third use remains refused",
+      "passed": true
+    },
+    {
+      "name": "issue for nonce test: issued data handle",
+      "passed": true
+    },
+    {
+      "name": "wrong nonce is refused",
+      "passed": true
+    },
+    {
+      "name": "wrong nonce did not consume actual handle",
+      "passed": true
+    },
+    {
+      "name": "unknown generation is refused",
+      "passed": true
+    },
+    {
+      "name": "issue for empty test: issued data handle",
+      "passed": true
+    },
+    {
+      "name": "empty payload is refused",
+      "passed": true
+    },
+    {
+      "name": "empty rejection consumed its handle",
+      "passed": true
+    },
+    {
+      "name": "issue caller-selected zero label: issued data handle",
+      "passed": true
+    },
+    {
+      "name": "caller-chosen label is not authentication and still cannot write",
+      "passed": true
+    },
+    {
+      "name": "issue for copied-handle race: issued data handle",
+      "passed": true
+    },
+    {
+      "name": "concurrent copies consume exactly once",
+      "passed": true
+    },
+    {
+      "name": "C calls leave caller-owned byte buffer unchanged",
+      "passed": true
+    }
+  ],
+  "scope": "Real C ABI invocation of source issue/validate exports. The valid nonempty path is a consumed grant plus CompatibilityHold, not a knowledge write. No revoke or cross-process protection is asserted.",
+  "fixture": {
+    "bytes": 256,
+    "sha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+    "unchanged": true
+  },
+  "passed_checks": 17,
+  "failed_checks": 0
+}

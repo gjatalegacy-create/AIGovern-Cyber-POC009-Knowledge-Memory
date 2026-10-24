@@ -1,0 +1,37 @@
+name: Knowledge memory and FFI
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: cargo fetch --locked
+      - run: cargo test --locked --offline
+      - run: cargo test --locked --offline --manifest-path dependencies/science-domains/Cargo.toml
+      - run: cargo build --release --locked --offline
+      - name: Five process restarts
+        shell: bash
+        run: |
+          if [ "${{ runner.os }}" = "Windows" ]; then EXE=target/release/poc009-memory.exe; else EXE=target/release/poc009-memory; fi
+          python tools/demo.py --binary "$EXE" --output-dir local-demo-ci
+      - name: Actual C ABI compatibility boundary
+        shell: bash
+        run: |
+          if [ "${{ runner.os }}" = "Windows" ]; then LIB=target/release/poc009_knowledge_memory.dll; else LIB=target/release/libpoc009_knowledge_memory.so; fi
+          python tools/ffi_probe.py --library "$LIB" --output-dir local-ffi-ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evidence-${{ matrix.os }}
+          path: |
+            local-demo-ci/RESULT.json
+            local-demo-ci/transcript.jsonl
+            local-ffi-ci/RESULT.json

@@ -1,0 +1,560 @@
+{
+  "schema": "POC009/DEMO/1",
+  "status": "PASS",
+  "cycle_count": 5,
+  "fresh_process_per_step": true,
+  "working_directory": ". (this output directory)",
+  "runner": "runner/poc009-memory.exe",
+  "runner_sha256": "6a0bcf8c1e0dd8a4570b4c5b1b8e4fdc433aea3f4371de673036e13cf07c8772",
+  "script_sha256": "b8abe720817d0536da2911d4308824510f604841c093172a168f9ad2179bbb67",
+  "inputs": [
+    {
+      "path": "inputs/01-missing.json",
+      "sha256": "dda634c4f37f28d44a99c22feeffa6ea70da562e3660271a1c8819be24fbed19",
+      "bytes": 214
+    },
+    {
+      "path": "inputs/02-counter.json",
+      "sha256": "e1736bf006fb92e0fbcf27a6d742d10825e0ab7c46a1cd887a712709c4ab393d",
+      "bytes": 407
+    },
+    {
+      "path": "inputs/03-support.json",
+      "sha256": "6c0f79139be0f13d5e451c61d72cd2c2d36ac3c2032b127ab09c35c5c76f80c1",
+      "bytes": 430
+    },
+    {
+      "path": "inputs/04-counter-repeat.json",
+      "sha256": "d488aa4d9102abd40005bea8bbb7094ab50dcb166f0e7577cf0e431de9aa06f8",
+      "bytes": 442
+    },
+    {
+      "path": "inputs/05-support-repeat.json",
+      "sha256": "ce5f809dc5274950758cc402d72449729ff4645020a105f8c6d575207bba6fcf",
+      "bytes": 456
+    }
+  ],
+  "commands": [
+    {
+      "label": "01-step",
+      "argv": [
+        "runner/poc009-memory.exe",
+        "step",
+        "demo.wal",
+        "inputs/01-missing.json"
+      ],
+      "cwd": ".",
+      "process_id": 10676,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.359,
+      "stdout": "01-step.stdout",
+      "stderr": "01-step.stderr",
+      "stdout_sha256": "51b24520d6d58fcdfb0f81b40bab64ecf0bde1564949365c897b5bd7697442b3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "02-step",
+      "argv": [
+        "runner/poc009-memory.exe",
+        "step",
+        "demo.wal",
+        "inputs/02-counter.json"
+      ],
+      "cwd": ".",
+      "process_id": 7912,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.046,
+      "stdout": "02-step.stdout",
+      "stderr": "02-step.stderr",
+      "stdout_sha256": "662e333899dc78f5666131181e7fbc569cad15e4b701a075ae9bf8c9edf98971",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "03-step",
+      "argv": [
+        "runner/poc009-memory.exe",
+        "step",
+        "demo.wal",
+        "inputs/03-support.json"
+      ],
+      "cwd": ".",
+      "process_id": 2272,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.047,
+      "stdout": "03-step.stdout",
+      "stderr": "03-step.stderr",
+      "stdout_sha256": "4d6f4dc3b770171021419f17f1f455fe01ee8cbc649dd10fd02415cc346e496f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "04-step",
+      "argv": [
+        "runner/poc009-memory.exe",
+        "step",
+        "demo.wal",
+        "inputs/04-counter-repeat.json"
+      ],
+      "cwd": ".",
+      "process_id": 6728,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.047,
+      "stdout": "04-step.stdout",
+      "stderr": "04-step.stderr",
+      "stdout_sha256": "410b129da7d6a8c916e84b918f35f3afaecdd1628775578e4644123e8800792c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "05-step",
+      "argv": [
+        "runner/poc009-memory.exe",
+        "step",
+        "demo.wal",
+        "inputs/05-support-repeat.json"
+      ],
+      "cwd": ".",
+      "process_id": 12200,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.031,
+      "stdout": "05-step.stdout",
+      "stderr": "05-step.stderr",
+      "stdout_sha256": "170296751e3b067324c6460cee4a5530e9d670d9cb93bc4281c37cc751f19c73",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "06-inspect",
+      "argv": [
+        "runner/poc009-memory.exe",
+        "inspect",
+        "demo.wal",
+        "public-era00-five-cycles"
+      ],
+      "cwd": ".",
+      "process_id": 14884,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.016,
+      "stdout": "06-inspect.stdout",
+      "stderr": "06-inspect.stderr",
+      "stdout_sha256": "85e4ca8a544d9a048a6d974abf693696a164ff8bb0ee400be32e799b681a5696",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "checks": [
+    {
+      "name": "01-step: process completed successfully",
+      "passed": true
+    },
+    {
+      "name": "01-step: JSON object output",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: expected current model classification",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: revision and PD turn continuity",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: exact ordered user text retained",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: previous record chain",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: memory survives preceding process exit",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: raw input bytes bound",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: borrowed ingress preserves pointer and bytes",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: same-process grant reuse denied",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: no native verdict or transferred authority",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: model execution matches input availability",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: exact prior retrieval",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: no tail repair on clean run",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: separate support counterproof and missing counts",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: missing is not numerical equality",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: missing input manufactures no candidate",
+      "passed": true
+    },
+    {
+      "name": "02-step: process completed successfully",
+      "passed": true
+    },
+    {
+      "name": "02-step: JSON object output",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: expected current model classification",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: revision and PD turn continuity",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: exact ordered user text retained",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: previous record chain",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: memory survives preceding process exit",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: raw input bytes bound",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: borrowed ingress preserves pointer and bytes",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: same-process grant reuse denied",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: no native verdict or transferred authority",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: model execution matches input availability",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: exact prior retrieval",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: no tail repair on clean run",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: separate support counterproof and missing counts",
+      "passed": true
+    },
+    {
+      "name": "cycle 2: missing is not numerical equality",
+      "passed": true
+    },
+    {
+      "name": "03-step: process completed successfully",
+      "passed": true
+    },
+    {
+      "name": "03-step: JSON object output",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: expected current model classification",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: revision and PD turn continuity",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: exact ordered user text retained",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: previous record chain",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: memory survives preceding process exit",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: raw input bytes bound",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: borrowed ingress preserves pointer and bytes",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: same-process grant reuse denied",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: no native verdict or transferred authority",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: model execution matches input availability",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: exact prior retrieval",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: no tail repair on clean run",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: separate support counterproof and missing counts",
+      "passed": true
+    },
+    {
+      "name": "cycle 3: missing is not numerical equality",
+      "passed": true
+    },
+    {
+      "name": "04-step: process completed successfully",
+      "passed": true
+    },
+    {
+      "name": "04-step: JSON object output",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: expected current model classification",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: revision and PD turn continuity",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: exact ordered user text retained",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: previous record chain",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: memory survives preceding process exit",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: raw input bytes bound",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: borrowed ingress preserves pointer and bytes",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: same-process grant reuse denied",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: no native verdict or transferred authority",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: model execution matches input availability",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: exact prior retrieval",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: no tail repair on clean run",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: separate support counterproof and missing counts",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: missing is not numerical equality",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: repeat keeps exact candidate identity",
+      "passed": true
+    },
+    {
+      "name": "cycle 4: previous occurrence retrieved",
+      "passed": true
+    },
+    {
+      "name": "05-step: process completed successfully",
+      "passed": true
+    },
+    {
+      "name": "05-step: JSON object output",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: expected current model classification",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: revision and PD turn continuity",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: exact ordered user text retained",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: previous record chain",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: memory survives preceding process exit",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: raw input bytes bound",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: borrowed ingress preserves pointer and bytes",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: same-process grant reuse denied",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: no native verdict or transferred authority",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: model execution matches input availability",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: exact prior retrieval",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: no tail repair on clean run",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: separate support counterproof and missing counts",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: missing is not numerical equality",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: repeat keeps exact candidate identity",
+      "passed": true
+    },
+    {
+      "name": "cycle 5: previous occurrence retrieved",
+      "passed": true
+    },
+    {
+      "name": "final: exactly two different candidate identities",
+      "passed": true
+    },
+    {
+      "name": "final: support and counterproof name different propositions",
+      "passed": true
+    },
+    {
+      "name": "final: each proposition has two distinct durable occurrences",
+      "passed": true
+    },
+    {
+      "name": "06-inspect: process completed successfully",
+      "passed": true
+    },
+    {
+      "name": "06-inspect: JSON object output",
+      "passed": true
+    },
+    {
+      "name": "final: fresh inspect reconstructs exact memory",
+      "passed": true
+    },
+    {
+      "name": "final: fresh inspect preserves head",
+      "passed": true
+    },
+    {
+      "name": "final: clean inspection leaves WAL bytes unchanged",
+      "passed": true
+    }
+  ],
+  "scope": "Two distinct model-conditional propositions and one missing-input event. No native verdict or physical observation. Repeated results are not independent evidence.",
+  "completed_cycles": 5,
+  "final_memory": {
+    "candidates": [
+      {
+        "candidate_sha256": "189ffe1babdd714a0a318ba9906d5bf3828ff96aaf9572f999b8d822660f9785",
+        "canonical_content": "{\"computed_bits\":\"3fd9bf043b938800\",\"context\":\"4b735bc395251be84cce2979734a81e5434d6cf2052052e324ebcd27abb5ec7c\",\"proposition\":\"MODEL_CONDITIONAL KiE IAU2000 era00 UT1 rad f64hex jd1=41424f8040000000 jd2=40ea8e8000000000 claim=3fd9bf043b938800 tol=3d719799812dea11. KiS residual<tol KiC residual>tol equality unresolved. One dependent model/input and not independent evidence and no observation. model_sha256=dad01a7db2a1414d71162100c598dcd354739cc80f9f116fb4a4bf0144ea834e.\",\"residual_bits\":\"0000000000000000\",\"schema\":\"POC009/MODEL-CONTENT/1\",\"source\":\"public-ut1-model-fixture\",\"status\":\"model_support\"}",
+        "occurrences": 2,
+        "origin_record_sha256": [
+          "50839fc00734ebe316134c34ba2a9b17843662a54a18adb70086888519acfc81",
+          "7b07f94a63891dc993f126cbebc2511720437df2d4b0ef370f6efa4c7faa9f1b"
+        ],
+        "proposition_sha256": "0ad8a4ab7224c7bceb7d134089be607047f665f48f1daf71e55804fcf88aca4e",
+        "status": "model_support"
+      },
+      {
+        "candidate_sha256": "75ec061bec454678366e5d8abc15df90854b492670145359082a7f4ca14ac0f8",
+        "canonical_content": "{\"computed_bits\":\"3fd9bf043b938800\",\"context\":\"4b735bc395251be84cce2979734a81e5434d6cf2052052e324ebcd27abb5ec7c\",\"proposition\":\"MODEL_CONDITIONAL KiE IAU2000 era00 UT1 rad f64hex jd1=41424f8040000000 jd2=40ea8e8000000000 claim=0000000000000000 tol=3d719799812dea11. KiS residual<tol KiC residual>tol equality unresolved. One dependent model/input and not independent evidence and no observation. model_sha256=dad01a7db2a1414d71162100c598dcd354739cc80f9f116fb4a4bf0144ea834e.\",\"residual_bits\":\"3fd9bf043b938800\",\"schema\":\"POC009/MODEL-CONTENT/1\",\"source\":\"public-ut1-model-fixture\",\"status\":\"model_counterproof\"}",
+        "occurrences": 2,
+        "origin_record_sha256": [
+          "2b86945d1f40a4add182d4e10f3e2ac8720a5ad3b92bc7679aa83cc3581141d0",
+          "2852139358b365c1c1611f6d9b6ab0c37a935114f5fc5808f7b66ed6b37e3c5a"
+        ],
+        "proposition_sha256": "554802ef03a0c4f0a59d7047bae6162ad775a181b9709c1e2cdf234c79ab47e3",
+        "status": "model_counterproof"
+      }
+    ],
+    "missing_evidence_events": 1,
+    "negative_candidates": 1,
+    "positive_candidates": 1,
+    "unresolved_events": 0
+  },
+  "wal": {
+    "path": "demo.wal",
+    "bytes": 44101,
+    "sha256": "9b84d828339af8ee447fa5d24560b16cd9cb9e3bc1590f6fa095245ef7967a51"
+  },
+  "passed_checks": 93,
+  "failed_checks": 0
+}

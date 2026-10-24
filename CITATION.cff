@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "Cite the exact POC009 release or commit used. The software and preprint DOIs are reserved; publication is pending at this preparation stage."
+type: software
+title: "AIGovern-Cyber POC009: Knowledge and Memory Continuity"
+version: "0.1.0"
+doi: "10.5281/zenodo.23614687"
+authors:
+  - family-names: "Gjata"
+    given-names: "Bledar"
+    affiliation: "Independent Researcher, Albania"
+    orcid: "https://orcid.org/0009-0003-7854-266X"
+license: Apache-2.0
+repository-code: "https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory"
+keywords:
+  - ESS-MAI
+  - AIGovern-Cyber
+  - Rust
+  - model-conditional evidence
+  - positive and negative memory
+  - checkpoint continuity
+  - reproducibility
+abstract: "A bounded Rust experiment combining extracted PD, ERA/KiE scientific computation and a source-derived one-use FFI gate with new scoped memory and storage adapters. Five fresh-process cycles preserve complete operation records, reconstructed memory and exact PD checkpoint bytes against controls. One supported proposition and one countered proposition coexist, each with two occurrence references. Local validation comprises 50 root tests and 19 separately executed science tests, with zero failures or ignored tests, plus a passing locked offline release build. The numerical example is a SOFA/sofars conformance-model comparison, not independent physical observation. Full native knowledge_verdict remains null; valid older history is accepted, finite bounds and source-version dependence remain explicit. The legacy FFI write surface remains no-write CompatibilityHold; a new borrowed callback delegates recomputation and storage to its owner. Apache-2.0 applies to the capsule with retained third-party MIT/SOFA obligations. Human architectural direction and AI-assisted engineering are disclosed."
+references:
+  - type: generic
+    title: "Scoped Model Support and Counterevidence Across Five Memory Cycles in ESS-MAI"
+    authors:
+      - family-names: "Gjata"
+        given-names: "Bledar"
+    doi: "10.5281/zenodo.23614714"
+    notes: "Accompanying preprint DOI reserved; publication pending."
+  - type: software
+    title: "ESS-MAI POC003–006 executable prior-art archive"
+    doi: "10.5281/zenodo.22750188"
+  - type: software
+    title: "AIGovern-Cyber POC007 public reference capsule"
+    doi: "10.5281/zenodo.23596907"
+  - type: generic
+    title: "Constitutional Self-Governance in ESS-MAI: Evidence-Bound Authority and an OPL2S Reference Capsule"
+    doi: "10.5281/zenodo.23597026"
+  - type: software
+    title: "AIGovern-Cyber POC008: Evidence-Bound Continuity"
+    doi: "10.5281/zenodo.23613613"
+  - type: generic
+    title: "Bounded Operational Continuity in ESS-MAI: A Source-Derived PD Checkpoint and Replay Experiment"
+    doi: "10.5281/zenodo.23613785"

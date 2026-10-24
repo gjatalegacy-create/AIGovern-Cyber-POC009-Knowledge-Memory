@@ -1,0 +1,13 @@
+# Minimal POC009 wrapper; numerical files are unchanged upstream bytes.
+[package]
+name = "sofars"
+version = "0.6.1"
+edition = "2024"
+authors = ["Huxulm <huxulm@gmail.com>"]
+description = "POC009 minimal ERA subset of sofars 0.6.1; not the complete upstream crate"
+license-file = "LICENSE"
+repository = "https://github.com/astro-xao/sofars"
+
+[lib]
+name = "sofars"
+path = "src/lib.rs"

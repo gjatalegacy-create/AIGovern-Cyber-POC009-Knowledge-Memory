@@ -1,0 +1,14 @@
+{
+  "case": "public-era00-five-cycles",
+  "operation": "cycle-03",
+  "tick": 3,
+  "text": "Test distinct claim B: the IAU2000 model angle is 0.40228372400281387 radians. Keep claim A and its counterproof unchanged.",
+  "science": {
+    "jd_part1": 2400000.5,
+    "jd_part2": 54388.0,
+    "time_scale": "UT1",
+    "claim_radians": 0.40228372400281387,
+    "tolerance_radians": 1e-12,
+    "source": "public-ut1-model-fixture"
+  }
+}

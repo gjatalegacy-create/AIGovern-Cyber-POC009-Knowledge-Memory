@@ -1,0 +1,24 @@
+[package]
+name = "aigovern-cyber-poc009-knowledge-memory"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.89"
+license = "Apache-2.0"
+description = "Scoped model support and counterproof memory across five restarted PD cycles"
+repository = "https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory"
+
+[lib]
+name = "poc009_knowledge_memory"
+crate-type = ["rlib", "cdylib"]
+
+[[bin]]
+name = "poc009-memory"
+path = "src/main.rs"
+
+[dependencies]
+sha2 = "=0.10.9"
+serde_json = { version = "=1.0.150", features = ["float_roundtrip"] }
+science-domains = { path = "dependencies/science-domains" }
+
+[lints.rust]
+warnings = "deny"

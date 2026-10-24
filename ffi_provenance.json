@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "artifact": "POC009 source-derived FFI gate and new callback adapter",
+  "source_product": "AIGovern-Cyber (ESS-MAI / Gjata Legacy lineage)",
+  "source_root_logical": "codex_zvn/runtime",
+  "source_root_handling": "Explicit operator argument; no machine-specific absolute path is published.",
+  "sources": [
+    {
+      "source_path_relative_to_runtime": "shadow/src/sovereign_ffi_gate.rs",
+      "source_sha256": "88ed03f02697ca772fb8d6bfd8575f16ce6404e720265a423ecffaa001081142",
+      "source_bytes": 24080,
+      "source_lines": 498,
+      "selected_line_ranges_inclusive": [
+        [
+          22,
+          25
+        ],
+        [
+          31,
+          47
+        ],
+        [
+          54,
+          54
+        ],
+        [
+          61,
+          67
+        ],
+        [
+          95,
+          106
+        ],
+        [
+          113,
+          148
+        ],
+        [
+          154,
+          157
+        ],
+        [
+          239,
+          249
+        ],
+        [
+          267,
+          294
+        ],
+        [
+          296,
+          340
+        ]
+      ],
+      "selected_source_utf8_sha256": "147e28eae7f0e3a1e31834ad24a0c04c7119795a14a18c91d2a6b6d11944f691",
+      "transformations": [
+        "Omit native VerificationReceipt, seal_verified_output, and receipt generation; preserve source registry, one-use CAS, unsafe byte borrow, and both legacy extern C functions.",
+        "Remove four legacy_ffi_compat cfg attributes to expose this narrowly selected demonstration ABI in the standalone crate.",
+        "Redirect the one lineage dependency to the extracted capability_lineage module; its original formulas and fields are unchanged.",
+        "Omit the historical header and obsolete write-success return-code prose; the implementation still returns CompatibilityHold (-8) and performs no write."
+      ]
+    },
+    {
+      "source_path_relative_to_runtime": "shadow/src/knowledge_lineage.rs",
+      "source_sha256": "ae59cfd49142926e35816849e320f018c8a920180eee3b5b12646364b2945d1b",
+      "source_bytes": 15942,
+      "source_lines": 349,
+      "selected_line_ranges_inclusive": [
+        [
+          44,
+          62
+        ],
+        [
+          97,
+          112
+        ],
+        [
+          143,
+          159
+        ],
+        [
+          169,
+          176
+        ]
+      ],
+      "selected_source_utf8_sha256": "039dd259ce831ecdd2c2258e94b138aa5eec55506dd2b3255db78d1a493f1af3",
+      "transformations": [
+        "Extract FNV helpers, MIN_CHAIN, exact Lineage data fields, derive_capability, and is_traceable only; reintroduce the impl wrapper.",
+        "Place source items in public capability_lineage module so unused native data fields remain unchanged; this module is integrity/lineage data, not a native admission authority."
+      ]
+    },
+    {
+      "source_path_relative_to_runtime": "shadow/src/sovereign_ffi_gate.rs",
+      "source_sha256": "88ed03f02697ca772fb8d6bfd8575f16ce6404e720265a423ecffaa001081142",
+      "source_bytes": 24080,
+      "source_lines": 498,
+      "selected_line_ranges_inclusive": [
+        [
+          347,
+          384
+        ],
+        [
+          467,
+          497
+        ]
+      ],
+      "selected_source_utf8_sha256": "ed4a404f6bac3fe81a3d9262c9ce222bf168fabe47bfa2150f8d4c6b268e8332",
+      "transformations": [
+        "Retain seven original gate tests; omit the native-verification-receipt test and its authority dependencies."
+      ]
+    }
+  ],
+  "new_code": [
+    "English module/API boundary documentation.",
+    "with_borrowed_payload callback adapter: source gate validation/burn, source byte borrow, no native verdict or write function.",
+    "Five adapter tests for all-byte/pointer preservation, empty/null rejection, wrong nonce, callback errors/panic, and a 16-thread copied-handle race."
+  ],
+  "limitations": [
+    "Process-local lifetime only; generation restarts in a new process, consumed slots are retained, and there is no revoke operation.",
+    "Deterministic nonce is not secret authentication; public issuance does not authenticate a principal.",
+    "Unsafe pointer validity is the caller's obligation; this is not isolation against hostile code in the same address space.",
+    "Legacy sovereign_validate_and_write stays no-write CompatibilityHold; the new adapter delegates effects to an independent verifier callback."
+  ],
+  "formatting": "Normalize line endings to LF and rustfmt with Rust 2021 edition.",
+  "rustfmt": "rustfmt 1.9.0-stable (88d9e12ae1 2026-08-18)",
+  "extractor": "tools/extract_ffi.py",
+  "extractor_sha256": "658e6c139262964dccf2cfd109fa5bd667db8e92ed55beee4f3531cf8b1454cd",
+  "output_path": "src/ffi_gate.rs",
+  "output_sha256": "dadf60eccd79873061a658d5a2a48bc081ba4b1bc4287e6ea1669a1bbd39e353",
+  "output_bytes": 19584,
+  "output_lines": 508
+}

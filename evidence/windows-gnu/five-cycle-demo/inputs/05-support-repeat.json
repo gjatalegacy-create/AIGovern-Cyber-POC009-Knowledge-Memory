@@ -1,0 +1,14 @@
+{
+  "case": "public-era00-five-cycles",
+  "operation": "cycle-05",
+  "tick": 5,
+  "text": "After another restart, retrieve claim B's exact scoped support and recompute claim B. Preserve both propositions and the earlier missing-input event.",
+  "science": {
+    "jd_part1": 2400000.5,
+    "jd_part2": 54388.0,
+    "time_scale": "UT1",
+    "claim_radians": 0.40228372400281387,
+    "tolerance_radians": 1e-12,
+    "source": "public-ut1-model-fixture"
+  }
+}
