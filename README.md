@@ -78,4 +78,6 @@ The capsule uses [Apache-2.0](LICENSE), with retained third-party MIT/SOFA notic
 
 Follow [REVIEW_PROTOCOL.md](REVIEW_PROTOCOL.md) for counterexamples. Artifact locations: [GitHub](https://github.com/gjatalegacy-create/AIGovern-Cyber-POC009-Knowledge-Memory) and [HF](https://huggingface.co/datasets/gjata-legacy/ess-mai-poc-009-knowledge-memory). [CITATION.cff](CITATION.cff) identifies the software; the separate [manuscript](paper/manuscript.md), *Scoped Model Support and Counterevidence Across Five Memory Cycles in ESS-MAI*, has the preprint identifier above and a [PDF](paper/scoped_knowledge_memory.pdf).
 
+Independent critique is invited through the [public PREreview request](https://prereview.org/preprints/doi-10.5281-zenodo.23614714). A published request is not a completed independent review.
+
 Research lineage: [ESS-MAI](https://github.com/gjatalegacy-create/ESS-MAI), [POC003–006 archive](https://doi.org/10.5281/zenodo.22750188), [POC007 software](https://doi.org/10.5281/zenodo.23596907), [POC007 preprint](https://doi.org/10.5281/zenodo.23597026), [POC008 software](https://doi.org/10.5281/zenodo.23613613), [POC008 preprint](https://doi.org/10.5281/zenodo.23613785). Their identifiers and results remain separate from POC009.
