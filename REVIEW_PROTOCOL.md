@@ -1,6 +1,6 @@
 # Reproduction and critical review
 
-**Local validation:** 50 root tests and 19 separate science tests passed. Frozen publication version and final evidence links remain pending. No external review has been established.
+**Local validation:** 50 root tests and 19 separate science tests passed, plus 93 release CLI checks and 17 external C ABI checks in separate runs. See [CLI evidence](evidence/windows-gnu/five-cycle-demo/RESULT.json) and [ABI evidence](evidence/windows-gnu/ffi-abi/RESULT.json). Software/preprint publication and CI remain pending. No external review has been established.
 
 Read the source provenance, [claim boundary](CLAIM_BOUNDARY.md) and [manuscript](paper/manuscript.md), then run the exact locked artifact with its supplied five-cycle fixtures. Distinguish a source observation, a proposed test and an executed counterexample.
 

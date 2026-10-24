@@ -16,6 +16,8 @@ For computed angle theta, claimed angle c and declared tolerance epsilon, the so
 
 The original legacy FFI write call remains a no-write `CompatibilityHold`. The new callback helper does not inherit a native verdict or make its callback trustworthy by name. Handles are process-local, nonces deterministic, consumed slots retained, and no hostile in-process sandbox or authenticated capability system is established.
 
+The release CLI demonstration passed 93 checks across five fresh processes. Separately, a Python `ctypes` probe passed 17 checks against the actual exported C ABI. That probe observes the legacy valid nonempty path returning `-8`, invalid/reused handle rejections and unchanged caller bytes; it does not exercise the CLI's new Rust callback as a C export or establish a native write. These are separate check sets, not additional Rust tests.
+
 The new storage/index code is distinct from the complete KnowledgeVault. Reopening replays the whole WAL; inspection can initialize or repair a trailing incomplete record. A coherent older valid history may be accepted without an external freshness anchor. Changed adapter source bytes or scientific provider bytes can invalidate earlier records; migration is absent.
 
 The inherited checkpoint format permits at most 4096 turns and 8 MiB, with other record/input limits. These are code bounds, not proof that every boundary or sequence was tested. No constant-space/time, physical power-cut safety, write/fsync fault-injection coverage, certification, AI Act compliance or third-party endorsement is asserted.

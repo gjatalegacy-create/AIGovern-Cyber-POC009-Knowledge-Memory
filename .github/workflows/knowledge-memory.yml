@@ -5,6 +5,7 @@ permissions:
 jobs:
   reproduce:
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
@@ -22,16 +23,16 @@ jobs:
         shell: bash
         run: |
           if [ "${{ runner.os }}" = "Windows" ]; then EXE=target/release/poc009-memory.exe; else EXE=target/release/poc009-memory; fi
-          python tools/demo.py --binary "$EXE" --output-dir local-demo-ci
+          python tools/demo.py --binary "$EXE" --output-dir "${{ runner.temp }}/poc009-demo"
       - name: Actual C ABI compatibility boundary
         shell: bash
         run: |
           if [ "${{ runner.os }}" = "Windows" ]; then LIB=target/release/poc009_knowledge_memory.dll; else LIB=target/release/libpoc009_knowledge_memory.so; fi
-          python tools/ffi_probe.py --library "$LIB" --output-dir local-ffi-ci
+          python tools/ffi_probe.py --library "$LIB" --output-dir "${{ runner.temp }}/poc009-ffi"
       - uses: actions/upload-artifact@v4
         with:
           name: evidence-${{ matrix.os }}
           path: |
-            local-demo-ci/RESULT.json
-            local-demo-ci/transcript.jsonl
-            local-ffi-ci/RESULT.json
+            ${{ runner.temp }}/poc009-demo/RESULT.json
+            ${{ runner.temp }}/poc009-demo/transcript.jsonl
+            ${{ runner.temp }}/poc009-ffi/RESULT.json
